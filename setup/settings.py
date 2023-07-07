@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "testimonials",
+    "imagekit",
 ]
 
 MIDDLEWARE = [
@@ -52,7 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "jornada_backend.urls"
+ROOT_URLCONF = "setup.urls"
 
 TEMPLATES = [
     {
@@ -70,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "jornada_backend.wsgi.application"
+WSGI_APPLICATION = "setup.wsgi.application"
 
 
 # Database
