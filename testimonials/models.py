@@ -3,7 +3,7 @@ from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
 
 
-class Testimonials(models.Model):
+class Testimonial(models.Model):
     photo = models.ImageField(upload_to="photos/")
     testimonial = models.TextField()
     name = models.CharField(max_length=200)
