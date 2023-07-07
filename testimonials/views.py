@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import Testimonial
+from .serializers import TestimonialSerializer
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the testimonials index.")
+class TestimonialViewSet(viewsets.ModelViewSet):
+    queryset = Testimonial.objects.all()
+    serializer_class = TestimonialSerializer
