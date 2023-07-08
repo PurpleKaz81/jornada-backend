@@ -8,7 +8,9 @@ class Testimonial(models.Model):
     testimonial = models.TextField()
     name = models.CharField(max_length=200)
 
-    photo_thumbnail = ImageSpecField(source="photo",
-                                    processors=[ResizeToFill(100, 100)],
-                                    format="JPEG",
-                                    options={"quality": 60})
+    photo_thumbnail = ImageSpecField(
+        source="photo",
+        processors=[ResizeToFill(100, 100)],
+        format="JPEG",
+        options={"quality": 60},
+    )
