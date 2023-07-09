@@ -60,7 +60,7 @@ ROOT_URLCONF = "setup.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "testimonials/templates")],
+        "DIRS": [os.path.join(BASE_DIR, "templates", "testimonials/templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -82,11 +82,11 @@ WSGI_APPLICATION = "setup.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "jornada",
-        "USER": "macbook",
-        "PASSWORD": "postgres",
-        "HOST": "localhost",
-        "PORT": "5432",
+        "NAME": os.getenv("JORNADA_DB_NAME"),
+        "USER": os.getenv("JORNADA_DB_USER"),
+        "PASSWORD": os.getenv("JORNADA_DB_PASSWORD"),
+        "HOST": os.getenv("JORNADA_DB_HOST"),
+        "PORT": os.getenv("JORNADA_DB_PORT"),
     }
 }
 
